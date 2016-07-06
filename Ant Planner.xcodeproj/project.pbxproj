@@ -14,6 +14,10 @@
 		38FAD28E1D2A6E5A007295ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD28C1D2A6E5A007295ED /* LaunchScreen.storyboard */; };
 		38FAD2991D2A6E5A007295ED /* Ant_PlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2981D2A6E5A007295ED /* Ant_PlannerTests.swift */; };
 		38FAD2A41D2A6E5A007295ED /* Ant_PlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2A31D2A6E5A007295ED /* Ant_PlannerUITests.swift */; };
+		38FAD2B21D2A6FFD007295ED /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B11D2A6FFD007295ED /* MasterViewController.swift */; };
+		38FAD2B41D2A71A6007295ED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B31D2A71A6007295ED /* DetailViewController.swift */; };
+		38FAD2B61D2A7454007295ED /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B51D2A7454007295ED /* Plan.swift */; };
+		38FAD2B81D2A8539007295ED /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B71D2A8539007295ED /* request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		38FAD29F1D2A6E5A007295ED /* Ant PlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ant PlannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FAD2A31D2A6E5A007295ED /* Ant_PlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ant_PlannerUITests.swift; sourceTree = "<group>"; };
 		38FAD2A51D2A6E5A007295ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FAD2B11D2A6FFD007295ED /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		38FAD2B31D2A71A6007295ED /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		38FAD2B51D2A7454007295ED /* Plan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		38FAD2B71D2A8539007295ED /* request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				38FAD2831D2A6E5A007295ED /* AppDelegate.swift */,
 				38FAD2851D2A6E5A007295ED /* ViewController.swift */,
 				38FAD2871D2A6E5A007295ED /* Main.storyboard */,
+				38FAD2B51D2A7454007295ED /* Plan.swift */,
+				38FAD2B31D2A71A6007295ED /* DetailViewController.swift */,
+				38FAD2B11D2A6FFD007295ED /* MasterViewController.swift */,
+				38FAD2B71D2A8539007295ED /* request.swift */,
 				38FAD28A1D2A6E5A007295ED /* Assets.xcassets */,
 				38FAD28C1D2A6E5A007295ED /* LaunchScreen.storyboard */,
 				38FAD28F1D2A6E5A007295ED /* Info.plist */,
@@ -261,6 +273,10 @@
 			files = (
 				38FAD2861D2A6E5A007295ED /* ViewController.swift in Sources */,
 				38FAD2841D2A6E5A007295ED /* AppDelegate.swift in Sources */,
+				38FAD2B21D2A6FFD007295ED /* MasterViewController.swift in Sources */,
+				38FAD2B41D2A71A6007295ED /* DetailViewController.swift in Sources */,
+				38FAD2B61D2A7454007295ED /* Plan.swift in Sources */,
+				38FAD2B81D2A8539007295ED /* request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
