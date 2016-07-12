@@ -8,8 +8,9 @@
 
 import UIKit
 
-let ownerId = "1"
-let password = "Wzf19970822!!!"
+let ownerId = ""
+let password = ""
+var loggedIn = false
 
 protocol PlanSelectionDelegate: class {
     func planSelected(newPlan: Plan)
@@ -17,11 +18,26 @@ protocol PlanSelectionDelegate: class {
 
 class MasterViewController: UITableViewController {
     
+    
+    @IBOutlet weak var logOutBtn: UIBarButtonItem!
     weak var delegate: PlanSelectionDelegate?
     var plans = [Plan]();
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        If not logged in, present login scene
+        ////////////////////////////////////////////////////////////////////////
+        if(loggedIn){
+            print("TRUE")
+        } else {
+            self.performSegueWithIdentifier("goto_login", sender: self)
+        }
+        ////////////////////////////////////////////////////////////////////////
+        
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -58,7 +74,7 @@ class MasterViewController: UITableViewController {
         let selectedPlan = self.plans[indexPath.row]
         self.delegate?.planSelected(selectedPlan)
         if let detailViewController = self.delegate as? DetailViewController {
-            splitViewController?.showDetailViewController(detailViewController, sender: nil)
+            splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)
         }
     }
     

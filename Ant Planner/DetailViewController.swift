@@ -32,25 +32,25 @@ class DetailViewController: UIViewController {
         tag?.text = plan.tag
         due?.text = plan.due
 //        if plan.rep != NSNull 
-        print(plan.rep)
-            switch plan.rep {
-            case "1":
-                rep?.text = "Every Day"
-                break
-            case "2":
-                rep?.text = "Every Week"
-                break
-            case "3":
-                rep?.text = "Every Month"
-                break
-            case "4":
-                rep?.text = "Every Year"
-                break
-            default:
-                rep?.text = "Never"
-                break
-            }
-//        }
+//        print(plan.rep)
+//            switch plan.rep {
+//                case "1":
+//                    rep?.text = "Every Day"
+//                    break
+//                case "2":
+//                    rep?.text = "Every Week"
+//                    break
+//                case "3":
+//                    rep?.text = "Every Month"
+//                    break
+//                case "4":
+//                    rep?.text = "Every Year"
+//                    break
+//                default:
+//                    rep?.text = "Never"
+//                    break
+//                }
+//            }
         phoneAlarm?.on = plan.phoneAlarm
         phonePush?.on = plan.phonePush
         desktopPush?.on = plan.desktopPush
