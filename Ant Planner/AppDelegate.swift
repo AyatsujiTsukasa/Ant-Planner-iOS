@@ -14,18 +14,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let splitViewController = self.window!.rootViewController as! UISplitViewController
-        let leftNavController = splitViewController.viewControllers.first as! UINavigationController
-        let masterViewController = leftNavController.topViewController as! MasterViewController
-        let rightNavController = splitViewController.viewControllers.last as! UINavigationController
-        let rootViewController = rightNavController.topViewController as! DetailViewController
-        //
+        /* 我把splitview删掉了，相应的code我comment掉了。
+         let splitViewController = self.window!.rootViewController as! UISplitViewController
+         let leftNavController = splitViewController.viewControllers.first as! UINavigationController
+         let masterViewController = leftNavController.topViewController as! MasterViewController
+         let rightNavController = splitViewController.viewControllers.last as! UINavigationController
+         let rootViewController = rightNavController.topViewController as! DetailViewController
+         //
+         let firstPlan = masterViewController.plans.first
+         rootViewController.plan = firstPlan
+         //
+         masterViewController.delegate = rootViewController
+         rootViewController.navigationItem.leftItemsSupplementBackButton = true
+         rootViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+        */
+        
+        /*
+        下面这句也需要做相应的修改吧？因为我不太清楚应该怎么改，所以没有动
         let firstPlan = masterViewController.plans.first
         rootViewController.plan = firstPlan
-        //
-        masterViewController.delegate = rootViewController
-        rootViewController.navigationItem.leftItemsSupplementBackButton = true
-        rootViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
+        */
         return true
     }
 

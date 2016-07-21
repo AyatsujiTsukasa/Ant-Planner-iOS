@@ -10,33 +10,18 @@ import UIKit
 
 let ownerId = ""
 let password = ""
-var loggedIn = false
 
 protocol PlanSelectionDelegate: class {
     func planSelected(newPlan: Plan)
 }
 
-class MasterViewController: UITableViewController {
+class PlanViewController: UITableViewController {
     
-    
-    @IBOutlet weak var logOutBtn: UIBarButtonItem!
     weak var delegate: PlanSelectionDelegate?
     var plans = [Plan]();
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-//        If not logged in, present login scene
-        ////////////////////////////////////////////////////////////////////////
-        if(loggedIn){
-            print("TRUE")
-        } else {
-            self.performSegueWithIdentifier("goto_login", sender: self)
-        }
-        ////////////////////////////////////////////////////////////////////////
-        
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -73,7 +58,7 @@ class MasterViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedPlan = self.plans[indexPath.row]
         self.delegate?.planSelected(selectedPlan)
-        if let detailViewController = self.delegate as? DetailViewController {
+        if let detailViewController = self.delegate as? PlanViewController {
             splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)
         }
     }
