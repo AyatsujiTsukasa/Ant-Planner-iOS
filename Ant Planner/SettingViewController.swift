@@ -10,12 +10,21 @@ import UIKit
 
 class SettingViewController: UITableViewController {
 
+    @IBOutlet weak var username: UIButton!
+    
     @IBAction func logOut(sender: UIButton) {
+        let storage = NSHTTPCookieStorage.sharedHTTPCookieStorage()
+        for cookie in storage.cookies! {
+            storage.deleteCookie(cookie)
+        }
         status.setBool(false, forKey: "loggedIn")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let username = status.valueForKey("username") as! String!
+        self.username.setTitle("Username: \(username)", forState: .Normal)
+        self.tableView.tableFooterView = UIView(frame: CGRectZero)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,12 +42,12 @@ class SettingViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
     /*
