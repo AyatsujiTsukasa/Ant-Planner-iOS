@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E828E4A1D4DE8DA00B87F5F /* UserCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E828E491D4DE8DA00B87F5F /* UserCookie.swift */; };
 		38FAD2841D2A6E5A007295ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2831D2A6E5A007295ED /* AppDelegate.swift */; };
 		38FAD2891D2A6E5A007295ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD2871D2A6E5A007295ED /* Main.storyboard */; };
 		38FAD28B1D2A6E5A007295ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD28A1D2A6E5A007295ED /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		38FAD2991D2A6E5A007295ED /* Ant_PlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2981D2A6E5A007295ED /* Ant_PlannerTests.swift */; };
 		38FAD2A41D2A6E5A007295ED /* Ant_PlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2A31D2A6E5A007295ED /* Ant_PlannerUITests.swift */; };
 		38FAD2B21D2A6FFD007295ED /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B11D2A6FFD007295ED /* PlanViewController.swift */; };
-		38FAD2B41D2A71A6007295ED /* AddPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B31D2A71A6007295ED /* AddPlanController.swift */; };
 		38FAD2B61D2A7454007295ED /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B51D2A7454007295ED /* Plan.swift */; };
 		38FAD2B81D2A8539007295ED /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B71D2A8539007295ED /* request.swift */; };
 		3CED87ED1D3F979A00A210A6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87EC1D3F979A00A210A6 /* RegisterViewController.swift */; };
@@ -22,7 +22,6 @@
 		3CED87F51D3F9D6700A210A6 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87F41D3F9D6700A210A6 /* FriendsViewController.swift */; };
 		3CED87F71D3FB6A400A210A6 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87F61D3FB6A400A210A6 /* AlarmViewController.swift */; };
 		3CED87FB1D3FC6B800A210A6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87FA1D3FC6B800A210A6 /* SettingViewController.swift */; };
-		3CED87FF1D3FDB2400A210A6 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87FE1D3FDB2400A210A6 /* SlideMenuController.swift */; };
 		3CEF037B1D40AA850068247C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF037A1D40AA850068247C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E828E491D4DE8DA00B87F5F /* UserCookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCookie.swift; sourceTree = "<group>"; };
 		38FAD2801D2A6E5A007295ED /* Ant Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ant Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FAD2831D2A6E5A007295ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FAD2881D2A6E5A007295ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,7 +57,6 @@
 		38FAD2A31D2A6E5A007295ED /* Ant_PlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ant_PlannerUITests.swift; sourceTree = "<group>"; };
 		38FAD2A51D2A6E5A007295ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38FAD2B11D2A6FFD007295ED /* PlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
-		38FAD2B31D2A71A6007295ED /* AddPlanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlanController.swift; sourceTree = "<group>"; };
 		38FAD2B51D2A7454007295ED /* Plan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		38FAD2B71D2A8539007295ED /* request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 		3CED87EC1D3F979A00A210A6 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +64,6 @@
 		3CED87F41D3F9D6700A210A6 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		3CED87F61D3FB6A400A210A6 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		3CED87FA1D3FC6B800A210A6 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		3CED87FE1D3FDB2400A210A6 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		3CEF037A1D40AA850068247C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,17 +115,16 @@
 		38FAD2821D2A6E5A007295ED /* Ant Planner */ = {
 			isa = PBXGroup;
 			children = (
-				3CED87FE1D3FDB2400A210A6 /* SlideMenuController.swift */,
 				38FAD2831D2A6E5A007295ED /* AppDelegate.swift */,
 				3CEF037A1D40AA850068247C /* LoginViewController.swift */,
 				3CED87F61D3FB6A400A210A6 /* AlarmViewController.swift */,
 				38FAD2871D2A6E5A007295ED /* Main.storyboard */,
+				2E828E491D4DE8DA00B87F5F /* UserCookie.swift */,
 				3CED87F41D3F9D6700A210A6 /* FriendsViewController.swift */,
 				3CED87F21D3F9D0A00A210A6 /* TimerViewController.swift */,
 				3CED87EC1D3F979A00A210A6 /* RegisterViewController.swift */,
 				3CED87FA1D3FC6B800A210A6 /* SettingViewController.swift */,
 				38FAD2B51D2A7454007295ED /* Plan.swift */,
-				38FAD2B31D2A71A6007295ED /* AddPlanController.swift */,
 				38FAD2B11D2A6FFD007295ED /* PlanViewController.swift */,
 				38FAD2B71D2A8539007295ED /* request.swift */,
 				38FAD28A1D2A6E5A007295ED /* Assets.xcassets */,
@@ -292,14 +289,13 @@
 				3CEF037B1D40AA850068247C /* LoginViewController.swift in Sources */,
 				3CED87F71D3FB6A400A210A6 /* AlarmViewController.swift in Sources */,
 				3CED87FB1D3FC6B800A210A6 /* SettingViewController.swift in Sources */,
+				2E828E4A1D4DE8DA00B87F5F /* UserCookie.swift in Sources */,
 				3CED87F31D3F9D0A00A210A6 /* TimerViewController.swift in Sources */,
 				38FAD2841D2A6E5A007295ED /* AppDelegate.swift in Sources */,
 				3CED87ED1D3F979A00A210A6 /* RegisterViewController.swift in Sources */,
 				38FAD2B21D2A6FFD007295ED /* PlanViewController.swift in Sources */,
 				3CED87F51D3F9D6700A210A6 /* FriendsViewController.swift in Sources */,
-				38FAD2B41D2A71A6007295ED /* AddPlanController.swift in Sources */,
 				38FAD2B61D2A7454007295ED /* Plan.swift in Sources */,
-				3CED87FF1D3FDB2400A210A6 /* SlideMenuController.swift in Sources */,
 				38FAD2B81D2A8539007295ED /* request.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

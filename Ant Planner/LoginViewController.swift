@@ -16,6 +16,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     @IBAction func login(sender: UIButton) {
+        var userInfo = [String: String]()
+
+        // let usernameInput = uername.text
+        // let passwordInput = password.text
+        
+        // Check if usernameInput and passwordInput match
+        // Retrieve id from database
+        
         // Example of alert message when log in fails
         /* if ... {
             var alertView = UIAlertView()
@@ -27,15 +35,32 @@ class LoginViewController: UIViewController {
          } else if ... {
             .....
          } */
+        
+        /* If inputs are valid
+        userInfo["username"] = usernameInput!
+        userInfo["password"] = passwordInput!
+        userInfo["ownerId"] = id
+        */
+        
+        //因为现在还没有实现连接数据库，所以这里就直接用eeeeasy的帐号测试了……
+        userInfo["username"] = "eeeeasy"
+        userInfo["password"] = "ant123"
+        userInfo["ownerId"] = "3"
+        
+        status.setObject(userInfo, forKey: "cookies")
+        status.setObject(userInfo["username"], forKey: "username")
         status.setBool(true, forKey: "loggedIn")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
         // If not logged in, present login scene; else present home
         if status.boolForKey("loggedIn") == true {
-            print(true)
             self.performSegueWithIdentifier("goto_home", sender: self)
         }
     }

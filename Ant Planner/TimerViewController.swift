@@ -10,18 +10,22 @@ import UIKit
 import AVFoundation
 
 class TimerViewController: UIViewController {
-    var startTime = NSTimeInterval();
-    var endTime = NSTimeInterval();
-    var timer = NSTimer()
+    private var startTime = NSTimeInterval();
+    private var endTime = NSTimeInterval();
+    private var timer = NSTimer()
     
-    let workTime: NSTimeInterval = 25 * 60
-    let breakTime: NSTimeInterval = 5 * 60
-    let longBreak: NSTimeInterval = 25 * 60
-    var work = false
-    var count = 0
+    private let workTime: NSTimeInterval = 25 * 60
+    private let breakTime: NSTimeInterval = 5 * 60
+    private let longBreak: NSTimeInterval = 25 * 60
+    private var work = false
+    private var count = 0
 
-    let blue = UIColor.init(red: 66/255, green: 139/255, blue: 202/255, alpha: 1)
-    let green = UIColor.init(red: 92/255, green: 184/255, blue: 92/255, alpha: 1)
+    private let blue = UIColor.init(red: 66/255, green: 139/255, blue: 202/255, alpha: 1)
+    private let green = UIColor.init(red: 92/255, green: 184/255, blue: 92/255, alpha: 1)
+    
+    private let startGreen = UIImage(named: "Play Filled")
+    private let stopGreen = UIImage(named: "Stop Filled")
+    private let stopBlue = UIImage(named:"Stop Filled-blue")
     
     @IBOutlet weak var displayTimeLabel: UILabel!
     @IBOutlet weak var ctrlButton: UIButton!
@@ -32,7 +36,7 @@ class TimerViewController: UIViewController {
             taskName.text = task.text
             taskName.hidden = false
             task.hidden = true
-            ctrlButton.setTitle("Stop", forState: .Normal)
+            ctrlButton.setImage(stopGreen, forState: .Normal)
             startTime = NSDate.timeIntervalSinceReferenceDate()
             endTime = startTime + workTime + 1
             work = true
@@ -46,7 +50,7 @@ class TimerViewController: UIViewController {
             displayTimeLabel.text = "25:00"
             displayTimeLabel.textColor = green
             ctrlButton.setTitleColor(green, forState: .Normal)
-            ctrlButton.setTitle("Start", forState: .Normal)
+            ctrlButton.setImage(startGreen, forState: .Normal)
         }
     }
     
@@ -65,14 +69,14 @@ class TimerViewController: UIViewController {
                     showNotification("Break", notifiBody: "Take a 5-minute break")
                 }
                 displayTimeLabel.textColor = blue
-                ctrlButton.setTitleColor(blue, forState: .Normal)
+                ctrlButton.setImage(stopBlue, forState: .Normal)
                 task.hidden = false
                 taskName.text = "Break"
             } else {
                 work = true
                 diff = workTime
                 displayTimeLabel.textColor = green
-                ctrlButton.setTitleColor(green, forState: .Normal)
+                ctrlButton.setImage(stopGreen, forState: .Normal)
                 taskName.text = task.text
                 taskName.hidden = false
                 task.hidden = true
