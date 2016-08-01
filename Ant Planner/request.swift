@@ -36,12 +36,12 @@ func sendRequest(method: String, url: String, form: String, handler: ((NSData?, 
     let session = NSURLSession.sharedSession()
     
     let request = NSMutableURLRequest(URL: url)
-    request.HTTPMethod = "POST"
+    request.HTTPMethod = method
     request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringCacheData
     
     let paramString = form
     request.HTTPBody = paramString.dataUsingEncoding(NSUTF8StringEncoding)
-    
+    print(request)
     let task = session.dataTaskWithRequest(request, completionHandler: handler!)
     task.resume()
 }

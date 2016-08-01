@@ -24,8 +24,9 @@ class Plan {
     let location: String
     let lat: Double
     let lng: Double
+    let reminder: String
     
-    init(id: Int, ownerId: Int, name: String, description: String, importance: Int, tag: String, due: String, rep: String, phoneAlarm: Bool, phonePush: Bool, desktopPush: Bool, url: String, location: String, lat: Double, lng: Double) {
+    init(id: Int, ownerId: Int, name: String, description: String, importance: Int, tag: String, due: String, rep: String, phoneAlarm: Bool, phonePush: Bool, desktopPush: Bool, url: String, location: String, lat: Double, lng: Double, reminder: String) {
         self.id = id
         self.ownerId = ownerId
         self.name = name
@@ -41,5 +42,6 @@ class Plan {
         self.location = location
         self.lat = lat
         self.lng = lng
+        self.reminder = reminder
     }
 }
