@@ -17,8 +17,6 @@ class PlanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UserCookie.addUserCookie()
-        
         let requestURL = NSURL(string: url)
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E828E4A1D4DE8DA00B87F5F /* UserCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E828E491D4DE8DA00B87F5F /* UserCookie.swift */; };
+		2E828E4A1D4DE8DA00B87F5F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E828E491D4DE8DA00B87F5F /* Utility.swift */; };
 		38FAD2841D2A6E5A007295ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2831D2A6E5A007295ED /* AppDelegate.swift */; };
 		38FAD2891D2A6E5A007295ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD2871D2A6E5A007295ED /* Main.storyboard */; };
 		38FAD28B1D2A6E5A007295ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FAD28A1D2A6E5A007295ED /* Assets.xcassets */; };
@@ -19,7 +19,6 @@
 		38FAD2B81D2A8539007295ED /* request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FAD2B71D2A8539007295ED /* request.swift */; };
 		3CED87ED1D3F979A00A210A6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87EC1D3F979A00A210A6 /* RegisterViewController.swift */; };
 		3CED87F31D3F9D0A00A210A6 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87F21D3F9D0A00A210A6 /* TimerViewController.swift */; };
-		3CED87F51D3F9D6700A210A6 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87F41D3F9D6700A210A6 /* FriendsViewController.swift */; };
 		3CED87F71D3FB6A400A210A6 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87F61D3FB6A400A210A6 /* AlarmViewController.swift */; };
 		3CED87FB1D3FC6B800A210A6 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED87FA1D3FC6B800A210A6 /* SettingViewController.swift */; };
 		3CEF037B1D40AA850068247C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF037A1D40AA850068247C /* LoginViewController.swift */; };
@@ -43,7 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E828E491D4DE8DA00B87F5F /* UserCookie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCookie.swift; sourceTree = "<group>"; };
+		2E828E491D4DE8DA00B87F5F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		38FAD2801D2A6E5A007295ED /* Ant Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ant Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FAD2831D2A6E5A007295ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38FAD2881D2A6E5A007295ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +60,6 @@
 		38FAD2B71D2A8539007295ED /* request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = request.swift; sourceTree = "<group>"; };
 		3CED87EC1D3F979A00A210A6 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3CED87F21D3F9D0A00A210A6 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		3CED87F41D3F9D6700A210A6 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		3CED87F61D3FB6A400A210A6 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		3CED87FA1D3FC6B800A210A6 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3CEF037A1D40AA850068247C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +117,7 @@
 				3CEF037A1D40AA850068247C /* LoginViewController.swift */,
 				3CED87F61D3FB6A400A210A6 /* AlarmViewController.swift */,
 				38FAD2871D2A6E5A007295ED /* Main.storyboard */,
-				2E828E491D4DE8DA00B87F5F /* UserCookie.swift */,
-				3CED87F41D3F9D6700A210A6 /* FriendsViewController.swift */,
+				2E828E491D4DE8DA00B87F5F /* Utility.swift */,
 				3CED87F21D3F9D0A00A210A6 /* TimerViewController.swift */,
 				3CED87EC1D3F979A00A210A6 /* RegisterViewController.swift */,
 				3CED87FA1D3FC6B800A210A6 /* SettingViewController.swift */,
@@ -289,12 +286,11 @@
 				3CEF037B1D40AA850068247C /* LoginViewController.swift in Sources */,
 				3CED87F71D3FB6A400A210A6 /* AlarmViewController.swift in Sources */,
 				3CED87FB1D3FC6B800A210A6 /* SettingViewController.swift in Sources */,
-				2E828E4A1D4DE8DA00B87F5F /* UserCookie.swift in Sources */,
+				2E828E4A1D4DE8DA00B87F5F /* Utility.swift in Sources */,
 				3CED87F31D3F9D0A00A210A6 /* TimerViewController.swift in Sources */,
 				38FAD2841D2A6E5A007295ED /* AppDelegate.swift in Sources */,
 				3CED87ED1D3F979A00A210A6 /* RegisterViewController.swift in Sources */,
 				38FAD2B21D2A6FFD007295ED /* PlanViewController.swift in Sources */,
-				3CED87F51D3F9D6700A210A6 /* FriendsViewController.swift in Sources */,
 				38FAD2B61D2A7454007295ED /* Plan.swift in Sources */,
 				38FAD2B81D2A8539007295ED /* request.swift in Sources */,
 			);

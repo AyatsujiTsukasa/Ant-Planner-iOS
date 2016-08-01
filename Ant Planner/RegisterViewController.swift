@@ -8,32 +8,17 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirm: UITextField!
-
-    func matchesForRegexInText(regex: String!, text: String!) -> [String] {
-        
-        do {
-            let regex = try NSRegularExpression(pattern: regex, options: [])
-            let nsString = text as NSString
-            let results = regex.matchesInString(text,
-                                                options: [], range: NSMakeRange(0, nsString.length))
-            return results.map { nsString.substringWithRange($0.range)}
-        } catch let error as NSError {
-            print("invalid regex: \(error.localizedDescription)")
-            return []
-        }
-    }
-
-    func extract(str: String) -> String {
-        return str.substringWithRange(Range<String.Index>(str.startIndex.advancedBy(4)..<str.endIndex.advancedBy(-5)))
-    }
     
     @IBAction func register(sender: UIButton) {
-        
+        submit()
+    }
+    
+    private func submit() {
         let usernameInput = username.text
         let emailInput = email.text
         let passwordInput = password.text
@@ -41,7 +26,6 @@ class RegisterViewController: UIViewController {
         
         let urlStr = "https://www.antplanner.org/register.php?username=\(usernameInput!)&email=\(emailInput!)&password=\(passwordInput!)&password2=\(confirmPasswordInput!)"
         let url = NSURL(string: urlStr)
-        print(urlStr)
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
@@ -49,37 +33,54 @@ class RegisterViewController: UIViewController {
             
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             
-            let info = self.matchesForRegexInText("<li\\b[^>]*>(.*?)</li>", text: responseString as! String).map(self.extract)
-            print(info)
-            
-            if (self.matchesForRegexInText("Account Created", text: responseString as! String).count > 0) {
-//                Account Created.
-//                Alert ("success", info).
-            } else {
-//                Error.
-//                Alert ("Failed", info).
+            let info = Utility.matchesForRegexInText("<li\\b[^>]*>(.*?)</li>", text: responseString as! String).map(Utility.extract)
+            var message = ""
+            for i in info {
+                message = message + "\n" + i
             }
-            
-            //
-            
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            if (Utility.matchesForRegexInText("Account Created", text: responseString as! String).count > 0) {
+                // Account Created.
+                dispatch_async(dispatch_get_global_queue(priority, 0), {
+                    let alertController = UIAlertController(title: "Account Created!", message: message, preferredStyle: .Alert)
+                    let okAction = UIAlertAction(title: "OK", style: .Default, handler: {
+                        action in self.performSegueWithIdentifier("account_created", sender: self)
+                    })
+                    alertController.addAction(okAction)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    })
+                })
+            } else {
+                // Error
+                dispatch_async(dispatch_get_global_queue(priority, 0), {
+                    let alertController = UIAlertController(title: "Failed", message: message, preferredStyle: .Alert)
+                    let okAction = UIAlertAction(title: "Retry", style: .Default, handler:nil)
+                    alertController.addAction(okAction)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                    })
+                })
+            }
         }
         task.resume()
-        
-        // Example of alert message when sign up fails
-        /* if (...) {
-            var alertView = UIAlertView()
-            alertView.title = "Sign Up Failed!"
-            alertView.message = "Please enter a valid email address"
-            alertView.delegate = self
-            alertVoew.addButtonWithTitle("OK")
-            alertView.show()
-        } else if (....) {
-            .....
-        } */
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if (textField.returnKeyType == .Join) {
+            submit()
+        }
+        return true
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        username.delegate = self
+        email.delegate = self
+        password.delegate = self
+        confirm.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -88,9 +89,6 @@ class RegisterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
 
     /*
     // MARK: - Navigation
