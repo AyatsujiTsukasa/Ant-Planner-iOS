@@ -22,7 +22,7 @@ class SettingViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let username = status.valueForKey("username") as! String!
+        let username = Utility.getCookieByName("username")
         self.username.setTitle("Username: \(username)", forState: .Normal)
         self.tableView.tableFooterView = UIView(frame: CGRectZero)
 
